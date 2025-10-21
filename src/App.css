@@ -1,0 +1,165 @@
+
+html, body, #root {
+  height: 100%;
+}
+body {
+  background: linear-gradient(180deg, #0b1220 0%, #0b1220 40%, #101a33 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.-selected { color: #1e3a8a !important; }
+.rating{
+    position: absolute;
+    bottom: 14px;
+    right:12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #cbd5e1;
+    background: linear-gradient(135deg,#172554,#1e3a8a);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 22px rgba(37,99,235,0.35);
+}
+.radiogombok{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(56,189,248,0.12);
+    border: 1px solid rgba(148,163,184,0.12);
+    border-radius: 999px;
+    padding: 2px 8px;
+    
+}
+.holographic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(1200px 800px at 30% 0%, #0b1220 0%, #0b1220 60%, #0b1220 100%);
+}
+
+.holographic-card {
+  width: 100%;
+  height: auto;
+  background: #0a0f1a;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  border: 1px solid rgba(148,163,184,0.12);
+}
+
+.holographic-card h2 {
+  color: #1e3a8a;
+  font-size: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 400%;
+  height: 300%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(148,163,184,0.12)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.6s ease;
+}
+
+.holographic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(56,189,248,0.25) inset;
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.label-keres{
+  color: #1e3a8a !important;
+  border-bottom: 1px solid #172554;
+}
+.kereses{
+  color: #1e3a8a;
+}
+.asd-selected{
+  color: #1e3a8a;
+}
+button.slick-arrow{
+  background-color: #172554 !important;
+  border-radius: 50%;
+  filter: drop-shadow(0 8px 14px rgba(37,99,235,0.35));
+}
+.img-carousel{
+  max-height: 120px;
+  border-radius: 10px;
+}
+.tagline{
+  display: flex;
+  justify-content: center;
+  color: #94a3b8;
+}
+#modal-modal-title{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+@media only screen and (max-width: 500px) {
+  .kartya{
+    max-width: 300px;
+}
+.MuiBottomNavigation-root{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; 
+  width: 100% !important; 
+  background: rgba(15,23,42,0.85) !important;
+  backdrop-filter: blur(8px);
+}
+.img-carousel{
+ max-height: 65px;
+}
+.nev{
+   font-size: 0.6em;
+}
+}
+.gomb{
+  background-color:  #cbd5e1 !important;
+  color: #172554 !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  text-transform: none !important;
+}
+
+/* slick dots recolor for a different signature look */
+.slick-dots li button:before { color: #94a3b8 !important; opacity: .8 !important; }
+.slick-dots li.slick-active button:before { color: #1e3a8a !important; opacity: 1 !important; }
+
+
+/* ---- Spotlight + 3D tilt hover effect ---- */
+
+
+
+
+
+
+
+
